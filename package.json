@@ -8,11 +8,15 @@
   "license": "MIT",
   "author": "Anthony Arellano -anthonyarellano70@gmail.com",
   "type": "module",
-  "main": "index.js",
+  "source": "./src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel serve --port 8080 src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -D dist"
   },
   "devDependencies": {
-    "parcel": "^2.15.4"
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.15.4",
+    "posthtml-include": "^2.0.1"
   }
 }
